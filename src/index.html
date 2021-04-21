@@ -1,29 +1,155 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
     <link rel="shortcut icon" href="./4geeks.ico" />
-  </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card border-success my-3" style="max-width: 100%;">
+            <div class="card-header bg-success border-success">
+                <h2>Payment for example</h2>
+            </div>
+            <div class="card-body text-success">
+                <form>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                <strong>Some fields are missing!</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-5">
+                            <label for="examplecard">Card #</label>
+                            <input type="number" class="form-control" id="examplecard" aria-describedby="emailHelp"
+                                placeholder="XXXXXXXXX" />
+                        </div>
+                        <div class="col-3">
+                            <label for="examplecvc">CVC #</label>
+                            <input type="number" class="form-control" id="examplecvc" aria-describedby="nombreHelp"
+                                placeholder="0000" />
+                        </div>
+                        <div class="col-4">
+                            <label for="exampleamount">Amount</label>
+                            <input type="number" class="form-control" id="exampleamount" aria-describedby="nombreHelp"
+                                placeholder="Amount" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="examplefirstname">First Name</label>
+                            <input type="text" class="form-control" id="examplefirstname"
+                                aria-describedby="emailHelp" />
+                        </div>
+                        <div class="col-6">
+                            <label for="examplelastname">Last Name</label>
+                            <input type="text" class="form-control" id="examplelastname"
+                                aria-describedby="nombreHelp" />
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label for="examplecity">City</label>
+                            <input type="text" class="form-control" id="examplecity" aria-describedby="emailHelp" />
+                        </div>
+                        <div class="col-3">
+                            <label for="examplestate">State</label>
+                            <select class="custom-select" id="examplestate">
+                                <option selected disabled value="">Choose...</option>
+                                <option>Option1</option>
+                                <option>Option2</option>
+                                <option>Option3</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="examplepostalcode">Postal Code</label>
+                            <input type="nombre" class="form-control" id="examplepostalcode"
+                                aria-describedby="nombreHelp" />
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col -3">
+                            <div class="form-group">
+                                <label>We accept:</label>
+                                <div class="col bg-success rounded">
+                                    <div class="form-check form-check-inline">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="season" id="seasonSummer" value="summer"
+                                                checked />
+                                            <i class="fab fa-cc-mastercard"></i>
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="season" id="seasonSummer" value="summer"
+                                                checked />
+                                            <i class="fab fa-cc-visa"></i></label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="season" id="seasonSummer" value="summer"
+                                                checked />
+                                            <i class="fab fa-cc-diners-club"></i>
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="season" id="seasonSummer" value="summer"
+                                                checked />
+                                            <i class="fab fa-cc-amex"></i></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <div class="row">
+                        <div class="col-3">
+                            <label>We accept:</label><br />
+                            <div class="col bg-secondary rounded">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input " type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1" />
+                                    <label class="form-check-label" for="inlineRadio1">
+                                        <i class="fab fa-cc-mastercard"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2" />
+                                    <label class="form-check-label" for="inlineRadio2"><i
+                                            class="fab fa-cc-visa"></i></label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio3" value="option3" />
+                                    <label class="form-check-label" for="inlineRadio3"><i
+                                            class="fab fa-cc-diners-club"></i>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio4" value="option3" />
+                                    <label class="form-check-label" for="inlineRadio4"><i class="fab fa-cc-amex"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3"></div>
+                        <div class="col">
+                            <label for="exampleFormControlTextarea1">Message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <small id="emailHelp" class="form-text text-muted">Add any notes here.</small>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="card-footer bg-transparent border-success d-flex justify-content-end">
+                <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Cancel</a>
+                <input class="btn btn-primary btn-lg" type="submit" value="Send" />
+            </div>
+            </form>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
